@@ -211,7 +211,7 @@ class QuePlaca:
 				return 'RS'
 
 			elif letras[0] == 'I' and\
-					letras[1] > 'B' and\
+					letras[1] >= 'B' and\
 						letras[2] <= 'Z':
 				return 'RS'
 
@@ -309,7 +309,7 @@ class QuePlaca:
 				return 'PE'
 
 			elif letras[0] == 'K' and\
-					letras[1] > 'F' and letras[2] < 'M' and\
+					letras[1] > 'F' and letras[1] < 'M' and\
 						letras[2] <= 'Z':
 				return 'PE'
 
@@ -346,11 +346,6 @@ class QuePlaca:
 				return 'PI'
 
 			elif letras[0] == 'L' and\
-					letras[1] > 'W' and letras[1] < 'W' and\
-						letras[2] <= 'Z':
-				return 'PI'
-
-			elif letras[0] == 'L' and\
 					letras[1] == 'W' and\
 						letras[2] <= 'Q':
 				return 'PI'
@@ -380,6 +375,11 @@ class QuePlaca:
 			elif letras[0] == 'M' and\
 					letras[1] == 'M' and\
 						letras[2] >= 'N':
+				return 'PB'
+				
+			elif letras[0] == 'M' and\
+					letras[1] == 'N' and\
+						letras[2] <= 'Z':
 				return 'PB'
 
 			elif letras[0] == 'M' and\
@@ -417,7 +417,7 @@ class QuePlaca:
 			#TOCANTINS - MVL a MXG 
 			elif letras[0] == 'M' and\
 					letras[1] == 'V' and\
-						letras[2] > 'L':
+						letras[2] >= 'L':
 				return 'TO'
 
 			elif letras[0] == 'M' and\
