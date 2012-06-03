@@ -94,17 +94,17 @@ class QuePlaca:
 			return False
 		else:
 			#PARANA - AAA a BEZ
-			if letras[0] == 'A': #AAA
-				if 	letras[1] <= 'Z' and\
+			if letras[0] == 'A' and\
+			 	letras[1] <= 'Z' and\
 					letras[2] <= 'Z':
-					return 'PR'
+				return 'PR'
 
-			elif letras[0] == 'B': #BEZ
-				if 	letras[1] <= 'E' and \
-				 	letras[2] <= 'Z':
-					return 'PR'
+			elif letras[0] == 'B' and\
+				 	letras[1] <= 'E' and\
+				 		letras[2] <= 'Z':
+				return 'PR'
 
-			#SAO PAULO - BFZ a GKI	
+			#SAO PAULO - BFA a GKI	
 			elif letras[0] == 'B' and\
 					letras[1] >= 'F' and \
 						letras[2] <= 'Z':
@@ -152,7 +152,7 @@ class QuePlaca:
 				return 'MA'
 
 			elif letras[0] == 'H' and\
-					letras[1] > 'O' and letras[1] < 'P' and\
+					letras[1] > 'O' and letras[1] <= 'P' and\
 						letras[2] <= 'Z':
 				return 'MA'
 
@@ -168,7 +168,7 @@ class QuePlaca:
 				return 'MS'
 
 			elif letras[0] == 'H' and\
-					letras[1] < 'T' and\
+					letras[1] > 'Q' and letras[1] < 'T' and\
 						letras[2] <= 'Z':
 				return 'MS'
 
