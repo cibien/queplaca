@@ -1,7 +1,7 @@
 #-*- encoding: utf-8 -*-
 __author__ = "Eduardo Orige"
 __credits__ = ["Eduardo Orige"]
-__version__ = "0.01"
+__version__ = "1.0 stable"
 __maintainer__ = "Eduardo Orige"
 __email__ = "eduardo.orige@gmail.com"
 __status__ = "Em Producao"
@@ -529,6 +529,11 @@ class QuePlaca:
 					letras[1] == 'I' and\
 						letras[2] >= 'Y':
 				return 'MT'
+				
+			elif letras[0] == 'N' and\
+					letras[1] == 'J' and\
+						letras[2] <= 'W':
+				return 'MT'
 
 			#GOIAS 3 - NJX a NLU
 			elif letras[0] == 'N' and\
@@ -575,11 +580,6 @@ class QuePlaca:
 				return 'RN'
 
 			elif letras[0] == 'N' and\
-					letras[1] < 'O' and\
-						letras[2] <= 'Z':
-				return 'RN'
-
-			elif letras[0] == 'N' and\
 					letras[1] == 'O' and\
 						letras[2] <= 'H':
 				return 'RN'
@@ -598,12 +598,7 @@ class QuePlaca:
 			#MATO GROSSO 3 - NPC a NPQ
 			elif letras[0] == 'N' and\
 					letras[1] == 'P' and\
-						letras[2] >= 'C':
-				return 'MT'
-
-			elif letras[0] == 'N' and\
-					letras[1] == 'P' and\
-						letras[2] <= 'Q':
+						letras[2] >= 'C' and letras[2] <= 'Q':
 				return 'MT'
 
 			#PARAIBA 2 - NPR a NQK
@@ -642,7 +637,7 @@ class QuePlaca:
 			#PARA 2 - NSE a NTC
 			elif letras[0] == 'N' and\
 					letras[1] == 'S' and\
-						letras[2] >= 'Z':
+						letras[2] >= 'E' and letras[2] <= 'Z':
 				return 'PA'
 
 			elif letras[0] == 'N' and\
@@ -672,9 +667,8 @@ class QuePlaca:
 			#RORAIMA 2 - NUH a NUL
 			elif letras[0] == 'N' and\
 					letras[1] == 'U' and\
-						letras[2] >= 'H' and\
-							letras[2] <= 'L':
-				return 'MT'
+						letras[2] >= 'H' and letras[2] <= 'L':
+				return 'RR'
 
 			#CEARA 3 - NUM a NVF 
 			elif letras[0] == 'N' and\
