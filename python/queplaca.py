@@ -8,7 +8,6 @@ __status__ = "Em Producao"
 
 import re
 class QuePlaca:
-	
 	detran = {
 		'AC' : 'http://www.detran.ac.gov.br/',
 		'AL' : 'http://www.detran.al.gov.br/',
@@ -38,7 +37,7 @@ class QuePlaca:
 		'SP' : 'http://www.detran.sp.gov.br/',
 		'TO' : 'http://www.detran.to.gov.br/',
 	}
-	
+
 	def __init__(self):
 		pass
 
@@ -81,11 +80,24 @@ class QuePlaca:
 
 			return letras, numeros
 
-
+	def emplacamento(self,placa):
+		"""
+		Verifica o mes de emplacamento da placa consultada.
+		"""
+		letras,numeros = self.split_placa(placa)
+		if letras is None or letras is None:
+			return False
+		else:
+			if int(numeros[2:]) > 12:
+				return int(numeros[-1])
+			else:
+				return int(numeros[2:])
+		
+		
 	def quePlaca(self,placa):
 		"""
 		Regras para utilizacao das placas segundo: http://pt.wikipedia.org/wiki/Placas_de_identifica%C3%A7%C3%A3o_de_ve%C3%ADculos_no_Brasil
-		Atualizados dia 05 de maio de 2012.
+		Fonte atualizada em 05/05/2012
 		"""
 		
 		letras, numeros = self.split_placa(placa)
@@ -940,10 +952,13 @@ class QuePlaca:
 			retorno_placa = self.quePlaca(placa)
 			if placa == '' :
 				print 'Tchau!'
-			elif not retorno_placa:
+			elif retorno_placa is None or retorno_placa is False:
 				print '!! Sequencia nao Utilizada !!'
 			else:
-				print retorno_placa
+				print
+				print '## Placa de %s ' % retorno_placa
+				print '## Mês %s é o seu mês de emplacamento!' % self.emplacamento(placa)
+				print '## Site Detran: %s ' % self.detran[retorno_placa]
 				
 
 if __name__ == '__main__':
