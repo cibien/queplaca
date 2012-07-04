@@ -7,7 +7,7 @@
 
 /* TODOTODOTODOTODOTODO
 *
-* FunÃ§ao de data para Emplacamento
+* Funçao de data para Emplacamento
 */
 function detran(uf){
 	if (uf == ""){
@@ -19,6 +19,40 @@ function detran(uf){
 	} else if (uf != "MG"){
 		return "http://www.detran." + uf.toLowerCase() + ".gov.br/"; 	
 	}
+}
+
+function estado(uf){
+	switch (uf) {
+		case "AC": return "ACRE";
+		case "AL": return "ALAGOAS";
+		case "AM": return "AMAZONAS";
+		case "AP": return "AMAPÁ";
+		case "BA": return "BAHIA";
+		case "CE": return "CEARÁ";
+		case "DF": return "DISTRITO FEDERAL";
+		case "ES": return "ESPIRITO SANTO";
+		case "GO": return "GOIÁS";
+		case "MA": return "MARANHÃO";
+		case "MG": return "MINAS GERAIS";
+		case "MS": return "MATO GROSSO DO SUL";
+		case "MT": return "MATO GROSSO";
+		case "PA": return "PARÁ";
+		case "PB": return "PARAIBA";
+		case "PE": return "PERNAMBUCO";
+		case "PI": return "PIAUÍ";
+		case "PR": return "PARANÁ";
+		case "RJ": return "RIO DE JANEIRO";
+		case "RN": return "RIO GRANDE DO NORTE";
+		case "RO": return "RONDONIA";
+		case "RR": return "RORAIMA";
+		case "RS": return "RIO GRANDE DO SUL";
+		case "SC": return "SANTA CATARINA";
+		case "SE": return "SERGIPE";
+		case "SP": return "SÃO PAULO";
+		case "TO": return "TOCANTINS";
+		default: return "";
+	}
+	
 }
 
 function quePlaca(_letras){
