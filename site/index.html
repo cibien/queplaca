@@ -1,0 +1,75 @@
+<!-- %inicio% -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+		<title>Que Placa</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store" />
+        <meta http-equiv="Pragma" content="no-cache, no-store" />
+        <meta name="description" content="Saiba de qual estado pertence qualquer placa de carro." />
+        <meta name="keywords" content="placas de automovel, placas de carro, placa de são paulo,placas do rio de janeiro" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Eduardo Orige" />
+        
+		<link href="css/estrutura.css" rel="stylesheet" type="text/css" />
+        <link href="css/interna.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="js/ui_placa.js"></script>
+		<script type="text/javascript" src="js/queplaca.js"></script>
+		
+		<link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+		<script type="text/javascript">
+			jQuery(function($){
+			   $("#letras").mask("aaa");
+			   $("#numeros").mask("9999");
+			});
+		</script>
+		
+</head>
+<body onload="init()">	
+	<div class="global">
+		<div class="placa">
+			<div class="cemporcento">
+				<div id="placaTag" class="placaTag"> De onde veio esse Veículo? </div>
+			</div>
+			
+			<form id="formPlaca" class="formPlaca">
+				<input type="text" id="letras"  style="text-transform:uppercase" class="letras" maxlength=3 value=""  onClick="formClick(this)"/>	
+				<input type="text" id="numeros" style="text-transform:uppercase" class="numeros" maxlength=4 value="" onClick="formClick(this)" onBlur="verifica_placa()" />
+			</form>
+		</div>
+		
+		<div class="emBreve">
+			<div class="ttEmBreve"> Em Breve </div>
+			<div class="agrupaIcon">
+				<a href="#">
+					<img src="imagens/apple.jpg" title="Apple" />
+				</a>
+				<a id="windows" href="#">
+					<img src="imagens/windows.jpg" title="Windows Phone" />
+				</a>
+				<a href="#">
+					<img src="imagens/android.jpg" title="Android" />
+				</a>
+			</div>
+		</div>
+		
+		<div class="direitos">
+			Que Placa é um projeto OpenSource sob licença BSD.<br />
+			Tem o intuito de ajudar pessoas a não serem lesadas por vendedores de carros usados <br/>
+			que vendem carros afirmando que tal veio de uma localidade e que na verdade pertence a outra.
+		</div>
+		
+	</div>
+	
+	
+	<!-- github -->
+	<a href="https://github.com/orige">
+		<img style="position: absolute; top: 0; right: 0; border: 0;"
+			src="imagens/github.jpg" alt="Fork me on GitHub" /></a>
+</body>
+</html>

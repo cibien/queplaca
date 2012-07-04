@@ -1,0 +1,33 @@
+.texto p {
+	float: none;
+	margin-bottom: 10px;
+}
+
+.texto span {
+	float: none;
+}
+
+.texto a {
+	float: none;
+}
+.texto .imgMin {
+	float: left;
+}
+
+
+.texto strong {
+	float: none;
+}
+.texto em {
+	float: none;
+	font-style: italic;
+}
+.texto ul {
+	float: none;
+	margin-top: -10px;
+	
+}
+.texto ul li {	
+	list-style: disc;
+	margin-left: 30px;
+}
